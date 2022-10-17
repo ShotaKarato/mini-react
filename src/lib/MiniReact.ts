@@ -10,7 +10,7 @@ export class MiniReact {
     element.type = type;
     element.props = {
       ...props,
-      children: children.length > 1 ? [...children] : children[0],
+      children: children.length > 0 ? [...children] : children[0],
     };
     return element;
   }

@@ -1,9 +1,7 @@
-// types
-export type MiniReactChildType = {
-  children: string | MiniReactElementType | (string | MiniReactElementType)[];
-};
 export type MiniReactElementType = {
-  type: string;
-  props: MiniReactChildType;
+  type: keyof HTMLElementTagNameMap;
+  props: {
+    children: string | MiniReactElementType | MiniReactChildrenType;
+  };
 };
 export type MiniReactChildrenType = (string | MiniReactElementType)[];
